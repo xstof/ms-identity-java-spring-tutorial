@@ -6,13 +6,27 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch MsIdentitySpringBootWebappApplication",
+            "name": "Launch sign-in",
             "request": "launch",
             "cwd": "${workspaceFolder}/1-Authentication/sign-in",
             "mainClass": "com.microsoft.azuresamples.msal4j.msidentityspringbootwebapp.MsIdentitySpringBootWebappApplication",
             "projectName": "ms-identity-spring-boot-webapp",
             "args": "--spring.profiles.active=local --logging.level.org.springframework=DEBUG",
             "preLaunchTask": "sign-in package"
+            //"vmArgs": "-Dcom.sun.net.ssl.checkRevocation=false -Dtrust_all_cert=true -Dhttp.proxyHost=192.168.65.2 -Dhttp.proxyPort=8888 -Dhttps.proxyHost=192.168.65.2 -Dhttps.proxyPort=8888 -Djavax.net.ssl.trustStore=/workspaces/spring-rest-api/FiddlerKeystore -Djavax.net.ssl.trustStorePassword=changeit"
+        },
+        {
+            "type": "java",
+            "name": "Launch authorization-1",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/2-Authorization-I/call-graph",
+            "mainClass": "com.microsoft.azuresamples.msal4j.msidentityspringbootwebapp.MsIdentitySpringBootWebappApplication",
+            "projectName": "ms-identity-spring-boot-webapp",
+            "args": "--spring.profiles.active=local --logging.level.org.springframework=DEBUG",
+            "preLaunchTask": "auth1 package",
+            "env": {
+                "spring.profiles.active": "local"
+            }
             //"vmArgs": "-Dcom.sun.net.ssl.checkRevocation=false -Dtrust_all_cert=true -Dhttp.proxyHost=192.168.65.2 -Dhttp.proxyPort=8888 -Dhttps.proxyHost=192.168.65.2 -Dhttps.proxyPort=8888 -Djavax.net.ssl.trustStore=/workspaces/spring-rest-api/FiddlerKeystore -Djavax.net.ssl.trustStorePassword=changeit"
         }
     ]

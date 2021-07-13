@@ -21,7 +21,16 @@
                 "cwd": "${workspaceFolder}/1-Authentication/sign-in"
             },
             "type": "shell",
-            "command": "mvn clean package -DskipTests",
+            "command": "mvn package -DskipTests",
+            "group": "build"
+        },
+        {
+            "label": "auth1 package",
+            "options": {
+                "cwd": "${workspaceFolder}/2-Authorization-I/call-graph"
+            },
+            "type": "shell",
+            "command": "mvn package -DskipTests",
             "group": "build"
         },
     ]
