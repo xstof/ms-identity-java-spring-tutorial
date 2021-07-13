@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MsIdentitySpringBootWebappApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/1-Authentication/sign-in",
+            "mainClass": "com.microsoft.azuresamples.msal4j.msidentityspringbootwebapp.MsIdentitySpringBootWebappApplication",
+            "projectName": "ms-identity-spring-boot-webapp",
+            "args": "--spring.profiles.active=local --logging.level.org.springframework=DEBUG",
+            "preLaunchTask": "sign-in package"
+            //"vmArgs": "-Dcom.sun.net.ssl.checkRevocation=false -Dtrust_all_cert=true -Dhttp.proxyHost=192.168.65.2 -Dhttp.proxyPort=8888 -Dhttps.proxyHost=192.168.65.2 -Dhttps.proxyPort=8888 -Djavax.net.ssl.trustStore=/workspaces/spring-rest-api/FiddlerKeystore -Djavax.net.ssl.trustStorePassword=changeit"
+        }
+    ]
+}
